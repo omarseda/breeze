@@ -1,6 +1,6 @@
 <?php
 
-class Fs {
+class Fm {
 
 	public $tree = [];
 	public $csstreeview;
