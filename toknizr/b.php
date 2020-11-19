@@ -54,21 +54,21 @@ class Toknizr {
 
     public function tokenize() {
         preg_replace_callback ($this->rx, function($m) {
-			$filtered = [];
-			foreach ($m as $rexCapturer => $captured) {
-				if (is_string($rexCapturer)) {
-					$filtered['tokentype'] = $rexCapturer;
+			$tmp = [];
+			foreach ($m as $rxCapturer => $captured) {
+				if (is_string($rxCapturer)) {
+					$tmp['tokentype'] = $rexCapturer;
 					if ($rexCapturer == '__num_int_____') {
-						$filtered['content'] = $captured;
+						$tmp['content'] = $captured;
 						// break;
 					} 
 					if (!empty($captured)) { // ERROR: jika $captured berupa integer 0
-						$filtered['content'] = $captured;
+						$tmp['content'] = $captured;
 						break;
 					}
 				}
 			}
-			$this->tokenlist[] = $filtered; 
+			$this->tokenlist[] = $tmp; 
 		}, 
 		$this->source);
     }
