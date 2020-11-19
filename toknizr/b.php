@@ -57,8 +57,8 @@ class Toknizr {
             $tmp = [];
             foreach ($m as $rxCapturer => $captured) {
                 if (is_string($rxCapturer)) {
-                    $tmp['tokentype'] = $rexCapturer;
-                    if ($rexCapturer == '__num_int_____') {
+                    $tmp['tokentype'] = $rxCapturer;
+                    if ($rxCapturer == '__num_int_____') {
                         $tmp['content'] = $captured;
                         // break;
                     } 
