@@ -1,2 +1,0 @@
-<br />
-<b>Warning</b>:  file_get_contents(tc.php): failed to open stream: No such file or directory in <b>E:\github.com\omarseda\breeze\toknizr\a.php</b> on line <b>4</b><br />
